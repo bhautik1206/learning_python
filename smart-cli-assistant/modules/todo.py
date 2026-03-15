@@ -1,6 +1,7 @@
 import os
-import json
 from pathlib import Path
+import json
+
 
 data_folder = Path("data")
 file_to_open = data_folder / "task.json"
