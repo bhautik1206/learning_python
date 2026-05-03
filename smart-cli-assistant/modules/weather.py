@@ -28,8 +28,9 @@ def apiCall(location):
         querystring["location"] = location
         response = requests.get(url, headers=headers, params=querystring)
         data = response.json()
-        temp = data["current_observation"]["condition"]["temperature"]
-        print(temp)
+        print(data["current_observation"]["condition"]["temperature"] ,"f")
+        print(data["current_observation"]["wind"]["speed"] ,'speed')
+        print(data["current_observation"]["condition"]["text"] ,'weather')
     except:
         print(response)
         print("Error is throwing")
